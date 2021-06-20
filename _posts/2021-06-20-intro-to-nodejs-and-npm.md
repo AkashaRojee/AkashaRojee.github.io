@@ -17,7 +17,7 @@ Let's dive in!
 
 Node.js is an open-source cross-platform run-time environment that allows developers to create server-side tools and applications, as well as command-line tools, using JavaScript, and for use outside of a browser (e.g. on a computer or server).
 
-#### Why Node.js?
+#### **Why Node.js?**
 
 Node.js is particularly great for web server development.
 
@@ -29,7 +29,7 @@ Node.js is particularly great for web server development.
 * Many web hosting providers even have specific infrastructure and documentation for hosting Node.js websites
 * Active ecosystem and developer community
 
-#### Any limitations?
+#### **Any limitations?**
 
 Node.js on itself, however, cannot do everything required for web development tasks, such as:
 * handling different HTTP request methods and at different URLs
@@ -45,7 +45,7 @@ npm is 2 things.
 1. A repository for open-source Node.js packages.
 2. A command-line utility, Node package manager, for interacting with said repository
 
-#### What does all of this mean?
+#### **What does all of this mean?**
 
 npm started off as a way to allow JavaScript developers to easily share their packaged modules of code.
 
@@ -53,7 +53,7 @@ npm started off as a way to allow JavaScript developers to easily share their pa
 
 ![Image of npmjs.com website](/assets/images/npmjs.com.png)
 
-#### But wait... What is a package?
+#### **But wait... What is a package?**
 
 A package is basically a folder that contains all the code to use a feature in your project. This feature can be a module, or a library of scripts.
 
@@ -63,7 +63,7 @@ Some examples of popular packages:
 * react - to create user interfaces
 * chalk - to style text in the terminal
 
-#### What about the command-line utility?
+#### **What about the command-line utility?**
 
 You can use npm commands to:
 - install packages from the npm repository
@@ -74,7 +74,7 @@ You can use npm commands to:
 
 Projects using Node.js packages have a package.json file. The package.json file is like the manifest of your project.
 
-#### What does package.json contain?
+#### **What does package.json contain?**
 
 It contains properties about your project, in JSON file format: metadata like the project's name, version, description and author, as well as information about the packages your project uses (in other words, the packages your project depends on, a.k.a. your project's dependencies).
 
@@ -105,7 +105,7 @@ Sample of package.json file:
 
 The properties with which we're mostly concerned here are the dependencies.
 
-#### The big word: dependencies
+#### **The big word: dependencies**
 
 Dependencies are packages that your project uses.
 
@@ -133,7 +133,7 @@ cd repo-name
 npm install
 ```
 
-#### dependencies vs. devDependencies
+#### **dependencies vs. devDependencies**
 
 The separation of `dependencies` and `devDependencies` are handy for when the project is run in either a production or a development environment. The npm install command has flags that caters for this.
 
@@ -145,7 +145,7 @@ Examples of packages that would be used in a production environment are your web
 
 On the other hand, in both a production and a development environment, you would need both `dependencies` (e.g. web framework), as well as `devDependencies` (e.g. code and testing utilities).
 
-#### What else about npm?
+#### **What else about npm?**
 
 One thing that I particularly love with npm is that it helps to automate various development tasks. More on that later!
 
@@ -165,7 +165,7 @@ Just so that you can test your app on multiple versions to ensure that your app 
 
 I used nvm on Ubuntu. For other version managers or other operating systems, [view the npm Docs for downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
-#### To install nvm
+#### **To install nvm**
 
 1. Enter either of the following commands:
 
@@ -191,7 +191,7 @@ which should output the nvm version.
 
 *For more information about nvm, [view the nvm repo](https://github.com/nvm-sh/nvm).*
 
-#### To install Node.js and npm
+#### **To install Node.js and npm**
 
 There is a new major release of Node.js every 6 months, with new features added and old ones removed.
 

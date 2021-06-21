@@ -2,7 +2,6 @@
 layout: post
 title: "Intro to Node.js and npm"
 date: 2021-06-20
-categories: nodejs npm beginner
 ---
 
 I recently started using npm packages for linting and testing. It took me a while to figure my way around the commands. Yet, I didn't fully understand npm as a tool and how it relates to Node.js.

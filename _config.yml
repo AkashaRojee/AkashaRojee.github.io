@@ -31,6 +31,15 @@ github_username:  AkashaRojee
 theme: minima
 plugins:
   - jekyll-feed
+  
+# Comment settings
+comments:
+  provider: utterances
+utterances:
+  repo: "AkashaRojee/AkashaRojee.github.io"
+  issue-term: "title"
+  label:  "comment thread"
+  theme:  "github-light
 
 # Exclude from processing.
 # The following items will not be processed, by default.

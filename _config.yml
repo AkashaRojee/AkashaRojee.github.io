@@ -39,7 +39,7 @@ utterances:
   repo: "AkashaRojee/AkashaRojee.github.io"
   issue-term: "title"
   label:  "comment thread"
-  theme:  "github-light
+  theme:  "github-light"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

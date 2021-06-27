@@ -1,8 +1,0 @@
-<script src="https://utteranc.es/client.js"
-        repo="AkashaRojee/Akasha.Rojee.github.io"
-        issue-term="title"
-        label="comment thread"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>

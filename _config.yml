@@ -33,14 +33,21 @@ plugins:
   - jekyll-feed
   
 # Comment settings
-html:
-  comments:
-    provider: utterances
-    utterances:
-      repo: "AkashaRojee/AkashaRojee.github.io"
-      issue-term: "title"
-      label:  "comment thread"
-      theme:  "github-light"
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      comments: true
+      
+repository: "AkashaRojee/AkashaRojee.github.io"
+comments:
+  provider: "utterances"
+  utterances:
+    issue-term: "title"
+    label:  "comment thread"
+    theme:  "github-light"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

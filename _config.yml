@@ -23,7 +23,7 @@ email: AkashaRojee@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Documenting my dev learning journey and helping others to learn
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "AkashaRojee.codes" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://AkashaRojee.codes" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: AkashaRojee
 github_username:  AkashaRojee
 

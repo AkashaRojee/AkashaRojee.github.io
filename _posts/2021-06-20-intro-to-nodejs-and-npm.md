@@ -264,6 +264,8 @@ To ensure that your Node.js project works stably over a longer period, without r
 
 For those starting out with Node.js and npm, I hope that this article cleared some of the mystery shrouding them.
 
+Anything unclear? Ask away!
+
 I am myself learning Node.js and npm, and I would love to receive your feedback.
 
 For those who already use Node.js and npm, what are some of your favourite packages?

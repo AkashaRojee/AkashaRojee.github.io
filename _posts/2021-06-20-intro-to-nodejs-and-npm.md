@@ -48,7 +48,7 @@ npm is 2 things.
 
 npm started off as a way to allow JavaScript developers to easily share their packaged modules of code.
 
-<a href="https://www.npmjs.com/" target="_blank">Today, the npm repository gives access to over 1.5 million reusable packages</a>
+<a href="https://www.npmjs.com/" target="_blank">Today, the npm repository gives access to over 1.5 million reusable packages.</a>
 
 ![Image of npmjs.com website](/assets/images/npmjs.com.png)
 
@@ -190,7 +190,7 @@ I used nvm on Ubuntu.
 
     which should output the nvm version.
 
-*For more information about nvm, [view the nvm repo](https://github.com/nvm-sh/nvm).*
+*For more information about nvm, <a href="https://github.com/nvm-sh/nvm" target="_blank">view the nvm repo</a>.*
 
 #### **To install Node.js and npm**
 
@@ -270,7 +270,7 @@ For those who already use Node.js and npm, what are some of your favourite packa
 
 And to more experienced developers, what are some advice/tips/best practices that you would recommend to those starting out?
 
-## Up next: more npm goodness!
+## Up next: more npm goodness ft. linting!
 
 ## References
 

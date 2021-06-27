@@ -48,7 +48,7 @@ npm is 2 things.
 
 npm started off as a way to allow JavaScript developers to easily share their packaged modules of code.
 
-[Today, the npm repository gives access to over 1.5 million reusable packages](https://www.npmjs.com/).
+<a href="https://www.npmjs.com/" target="_blank">Today, the npm repository gives access to over 1.5 million reusable packages</a>
 
 ![Image of npmjs.com website](/assets/images/npmjs.com.png)
 
@@ -100,7 +100,7 @@ Sample of package.json file:
 }
 ```
 
-*For more information about each property, [view the npm Docs about package.json properties](https://docs.npmjs.com/cli/v6/configuring-npm/package-json).*
+*For more information about each property, <a href="https://docs.npmjs.com/cli/v6/configuring-npm/package-json" target="_blank">view the npm Docs about package.json properties</a>.*
 
 The properties with which we're mostly concerned here are the dependencies.
 
@@ -162,7 +162,9 @@ Why would you want to have multiple versions, you ask?
 
 Just so that you can test your app on multiple versions to ensure that your app works for users on different versions.
 
-I used nvm on Ubuntu. For other version managers or other operating systems, [view the npm Docs for downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+I used nvm on Ubuntu.
+
+*For other version managers or other operating systems, <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">view the npm Docs for downloading and installing Node.js and npm</a>.*
 
 #### **To install nvm**
 
@@ -272,10 +274,10 @@ And to more experienced developers, what are some advice/tips/best practices tha
 
 ## References
 
-* [Express/Node introduction - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
-* [An absolute beginner's guide to using npm - The NodeSource Blog](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm)
-* [What is npm? - Node.js](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm)
-* [An introduction to the npm package manager - Node.js](https://nodejs.dev/learn/an-introduction-to-the-npm-package-manager)
-* [Specifics of npm's package.json handling - npm Docs](https://docs.npmjs.com/cli/v6/configuring-npm/package-json)
-* [Downloading and installing Node.js and npm - npm Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-* [nvm-sh/nvm: Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions - nvm](https://github.com/nvm-sh/nvm)
+* <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction" target="_blank">Express/Node introduction - MDN Web Docs</a>
+* <a href="https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm" target="_blank">An absolute beginner's guide to using npm - The NodeSource Blog</a>
+* <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm" target="_blank">What is npm? - Node.js</a>
+* <a href="https://nodejs.dev/learn/an-introduction-to-the-npm-package-manager" target="_blank">An introduction to the npm package manager - Node.js</a>
+* <a href="https://docs.npmjs.com/cli/v6/configuring-npm/package-json" target="_blank">Specifics of npm's package.json handling - npm Docs</a>
+* <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">Downloading and installing Node.js and npm - npm Docs</a>
+* <a href="https://github.com/nvm-sh/nvm" target="_blank">nvm-sh/nvm: Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions - nvm</a>

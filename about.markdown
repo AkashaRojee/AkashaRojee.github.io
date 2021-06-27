@@ -6,9 +6,9 @@ permalink: /about/
 
 Hello!
 
-I'm Akasha Rojee, a dev.
+I'm Akasha Rojee.
 
-I started this blog as a way to document my learning journey as well as to share information to help others.
+I started this blog as a way to document my dev learning journey as well as to share information to help others.
 
 When I'm not coding, I listen to Metal and I lift weights.
 

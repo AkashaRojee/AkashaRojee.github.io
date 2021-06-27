@@ -32,23 +32,6 @@ theme: minima
 plugins:
   - jekyll-feed
   
-# Comment settings
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      comments: true
-      
-repository: "akasharojee/akasharojee.github.io"
-comments:
-  provider: "utterances"
-  utterances:
-    issue-term: "title"
-    label:  "comment thread"
-    theme:  "github-light"
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

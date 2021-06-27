@@ -2,6 +2,7 @@
 layout: post
 title: "Intro to Node.js and npm"
 date: 2021-06-20
+featured-image: /assets/images/nodejs-npm-1.png
 ---
 
 This article is the first of a series about npm for beginners, and the introductory guide that I would have loved when I was just starting out.

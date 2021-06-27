@@ -20,12 +20,19 @@
 
 title: AkashaRojee.codes
 email: AkashaRojee@gmail.com
+author:
+  name: Akasha Rojee
+  email: Akasha.Rojee@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Documenting my dev learning journey and helping others to learn
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://AkashaRojee.codes" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: AkashaRojee
-github_username:  AkashaRojee
+google_analytics: G-TQ347GN73X
+
+minima:
+  social_links:
+    twitter: AkashaRojee
+    github:  AkashaRojee
 
 # Build settings
 theme: minima

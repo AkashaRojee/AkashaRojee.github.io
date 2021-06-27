@@ -41,7 +41,7 @@ defaults:
     values:
       comments: true
       
-repository: "AkashaRojee/AkashaRojee.github.io"
+repository: "akasharojee/akasharojee.github.io"
 comments:
   provider: "utterances"
   utterances:

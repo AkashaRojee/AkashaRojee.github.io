@@ -4,11 +4,11 @@ title: "Intro to Node.js and npm"
 date: 2021-06-20
 ---
 
+This article is the first of a series about npm for beginners, and the introductory guide that I would have loved when I was just starting out.
+
 I recently started using npm packages for linting and testing. It took me a while to figure my way around the commands. Yet, I didn't fully understand npm as a tool and how it relates to Node.js.
 
 Following several hours of nerding through documentation and some articles, I think I have the basics mostly laid out.
-
-This article is the first of a series about npm for beginners, and the introductory guide that I would have loved when I was just starting out.
 
 Let's dive in!
 
@@ -182,11 +182,11 @@ I used nvm on Ubuntu. For other version managers or other operating systems, [vi
 
 3. Check that nvm is successfully installed by entering the following command:
 
-```
-nvm --version
-```
+    ```
+    nvm --version
+    ```
 
-which should output the nvm version.
+    which should output the nvm version.
 
 *For more information about nvm, [view the nvm repo](https://github.com/nvm-sh/nvm).*
 
@@ -198,65 +198,65 @@ To ensure that your Node.js project works stably over a longer period, without r
 
 1. To install the LTS version:
 
-  ```
-  nvm install --lts
-  ```
+    ```
+    nvm install --lts
+    ```
 
 2. To check that Node.js and npm are successfully installed, enter the following commands:
 
-```
-node --version
-```
+    ```
+    node --version
+    ```
 
-which should output the Node.js version.
+    which should output the Node.js version.
 
-```
-npm --version
-```
+    ```
+    npm --version
+    ```
 
-which should output the npm version.
+    which should output the npm version.
 
 **The real benefit of nvm becomes obvious when you have to use different versions of Node.js, as explained earlier.**
 
 * To install the latest version:
 
-```
-nvm install node
-```
+    ```
+    nvm install node
+    ```
 
 * To list all versions available for installation:
 
-```
-nvm ls-remote
-```
+    ```
+    nvm ls-remote
+    ```
 
 * To install a specific version:
 
-```
-nvm install VERSION-NUMBER
-```
+    ```
+    nvm install VERSION-NUMBER
+    ```
 
 **Switching to a different version of Node.js installed on your machine:**
 
 * To list all versions installed on your machine and see which one is currently used:
 
-```
-nvm ls
-```
+    ```
+    nvm ls
+    ```
 
 * To use a specific version:
 
-```
-nvm use VERSION-NUMBER
-```
+    ```
+    nvm use VERSION-NUMBER
+    ```
 
 **Setting a default version of Node.js:**
 
 * To set a specific version as default:
 
-```
-nvm alias default VERSION-NUMBER
-```
+    ```
+    nvm alias default VERSION-NUMBER
+    ```
 
 ## That's it for now!
 
@@ -277,5 +277,5 @@ And to more experienced developers, what are some advice/tips/best practices tha
 * [What is npm? - Node.js](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm)
 * [An introduction to the npm package manager - Node.js](https://nodejs.dev/learn/an-introduction-to-the-npm-package-manager)
 * [Specifics of npm's package.json handling - npm Docs](https://docs.npmjs.com/cli/v6/configuring-npm/package-json)
-* [Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* [Downloading and installing Node.js and npm - npm Docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * [nvm-sh/nvm: Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions - nvm](https://github.com/nvm-sh/nvm)

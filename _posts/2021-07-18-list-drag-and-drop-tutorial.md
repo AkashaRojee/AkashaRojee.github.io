@@ -3,6 +3,7 @@ layout: post
 title: "List drag-and-drop tutorial"
 date: 2021-07-18
 featured-image: /assets/images/list-drag-and-drop-tutorial.png
+featured-image-large: /assets/images/list-drag-and-drop-tutorial-large.png
 featured-image-alt: List Drag and Drop Tutorial
 ---
 

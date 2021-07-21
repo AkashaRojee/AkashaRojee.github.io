@@ -336,7 +336,7 @@ Now that we understand the flow of a DND operation from start to end, let's star
 
 #### Setup
 
-If you haven't followed the steps in the HTML and CSS sections above, download the necessary HTML and CSS files from here.
+If you skipped directly to this section, <a href="https://github.com/AkashaRojee/list-drag-and-drop-tutorial/tree/setup-js" target="_blank">download the necessary HTML and SCSS files from here</a>
 
 ---
 

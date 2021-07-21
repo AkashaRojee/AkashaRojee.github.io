@@ -2,8 +2,8 @@
 layout: post
 title: "List drag-and-drop tutorial"
 date: 2021-07-18
-featured-image: /assets/images/html-drag-and-drop-api.png
-featured-image-alt: HTML Drag and Drop API
+featured-image: /assets/images/list-drag-and-drop-tutorial.png
+featured-image-alt: List Drag and Drop Tutorial
 ---
 
 This tutorial explains the basic concepts of the HTML Drag and Drop API and shows how to implement it in a list, including a simple row-shifting mechanism.
@@ -891,7 +891,7 @@ How easy was it to undertand? I would love to know your opinions.
 
 Anything unclear? Ask away!
 
-Implemented drag-and-drop in a project? Share the link in the comments below!
+I would also love to see your list drag-and-drop implementations - share the link in the comments below!
 
 Cheers and happy coding!
 

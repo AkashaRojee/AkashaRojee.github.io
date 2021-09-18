@@ -1,18 +1,34 @@
-## Introduction
+This guide shows how to mock API calls and use the Redux store when testing React components.
 
-### Scenario
+For tests to be effective, they have to be accurate: "the more your tests resembles the way your software is used, the more confidence they can give you" (Kent C. Dodds).
 
-You have a React component that makes an API call and loads the returned data into a Redux store, and you want to test the component using React Testing Library.
+When your tests deal with dynamic behaviour and side effects, you want to mimic the real objects in the best way possible.
 
-## Assumptions
+**The test scenario that we'll use in this guide:**
 
-- Create React App is used.
+**_You have a React component that makes an API call and loads the returned data into a Redux store, and you want to test the component using React Testing Library (RTL)._**
+
+While researching into the best way to do this, I came across service workers and network-level interception, and custom RTL renders. This guide lays down my findings and approach to the test scenario.
+
+We'll have a deeper look into the test scenario, then briefly look at the different ways to mimic real objects in tests.
+
+Before getting to the how-to, we'll go through the reasoning behind the best way to test thunks and asynchronous logic, to mock API requests, and to make the Redux store globally available throughout the test environment.
+
+The how-to section will then walk you through how the test setup works and the steps for implementing it, along with a demo.
+
+## Test scenario
+
+You have a React component that makes an API call and loads the returned data into a Redux store, and you want to test the component using RTL.
+
+### Assumptions
+
+- Create React App (CRA) is used to set up the app.
 - The API is a REST API.
 - Jest is used as test runner.
 
 ### Constraints
 
-During testing, we don't want to hit the API. We might exceed API limits or, in the case of POST requests, we might edit data in the API. So, we have to mock the API requests.
+During testing, we don't want to hit the API. We might exceed API limits. In the case of POST requests, we might even edit data in the API. So, we have to mock the API requests.
 
 Moreover, fetching data from an API is asynchronous logic. In Redux, the standard is to place asynchronous logic inside thunks. So, API calls are made inside thunks.
 
@@ -20,23 +36,39 @@ Moreover, fetching data from an API is asynchronous logic. In Redux, the standar
 
 How do we test thunks? How do we properly mock asynchronous requests?
 
+## Test doubles
+
+First, let's have a brief look at test doubles. A test double is a way to mimic a real object for testing purposes. Some of the most common ones are:
+
+- Stubs (you hardcode data and use that in your tests)
+- Fakes (you use a simplified implementation of the object)
+- Mocks (you preprogram an object that can respond dynamically)
+
+Understanding the differences between them is essential to know when to use each in your tests.
+
+Stubs and fakes do not allow you to test the real behaviour of your app. Stubs are only predefined data that are used as answers to calls during your tests. As for fakes, though they are working implementations, they have limited capabilities and are not the same as the actual implementation in your code.
+
+On the other hand, mocks allow you to verify that the expected actions are performed. E.g. API requests/responses being sent/received properly.
+
 ## Testing thunks?
 
 Thunks are an implementation detail (something which your users don't use/see/know about).
 
-In React, testing is meant to test that your components work as they should for your users.
+React recommends testing your components without relying on their implementation details. In other words, your test should focus on whether your components work the way they should for your users.
 
-One of the guiding principles of React Testing Library is actually that tests should be user-centric - tests should use components the way users would use the application.
+One of the guiding principles of RTL is actually that tests should be user-centric - tests should use components the way users would use the app. As such, implementation details are not to be tested in isolation.
 
-As such, implementation details are not to be tested in isolation.
+This prevents your tests from breaking when you refactor your components (whereby implementation details are changed, but functionality remains the same), and prevents false positives (whereby your tests pass even though your components are not working as they should).
 
-This prevents your tests from breaking when you refactor your components (whereby implementation details are changed, but functionality remains the same), and also prevents false positives (whereby your tests pass even though your components are not working as they should).
+Because this testing approach makes you look at your app from the user's perspective, it also encourages you to apply accessibility best practices in your components.
 
-So, if we do not test thunks, how do we test asynchronous logic, such as API requests, located inside of thunks?
+So, if we do not test thunks, how do we test asynchronous logic, such as API requests, which are located inside of thunks?
 
 ## Testing asynchronous logic
 
-Ideally, we want the test to still follow thunk behaviour, i.e. the asynchronous logic inside the thunk must be able to interact with the Redux store's `dispatch` and `getState` methods.
+You could hardcode a resolved promise with sample API data as value, and feed that as input to your test - this is an example of a stub. However, this would at most allow you to test that data is being processed properly, and not how your app actually handles asynchronous logic.
+
+Ideally, when testing asynchronous logic located inside of thunks, we want the test to still follow thunk behaviour, i.e. the asynchronous logic inside the thunk must be able to interact with the Redux store's `dispatch` and `getState` methods. This allows you to test the real behaviour of your app.
 
 Here's what Redux recommends:
 
@@ -54,11 +86,15 @@ The thunk will still try to make a real API request, which then gets intercepted
 
 Since network-level API mocking involves intercepting a real API request to return a mock response, why not just mock the API request itself?
 
-You don't expect your users to mock fetching data from an API. Going by the React Testing Library's guiding principles, your tests shouldn't mock fetching either.
+You don't expect your users to mock fetching data from an API. Going by the RTL's guiding principles, your tests shouldn't mock fetching either.
 
-At best, you could mock fetching by reimplementing the API as a function and setting this as the mock implementation of the window's fetch, using spies. However, if the API's implementation changes (e.g properties and headers of the fetch response), you'll have to change your mock function. Moreover, if there's an error with the way you call your fetch in the test, the test could still pass, but it'd actually be a broken test.
+At best, you could mock fetching by reimplementing the API as a function and setting this as the mock implementation of the window's fetch, using spies - this is an example of a fake.
+
+However, if the API's implementation changes (e.g properties and headers of the fetch response), you'll have to change your mock function. Moreover, if there's an error with the way you call your fetch in the test, the test could still pass, but it'd actually be a broken test.
 
 The better solution is therefore to test API calls with implementation details out of the picture.
+
+...That way, you can still refactor your API calls, and your tests would...
 
 ## API mocking libraries
 

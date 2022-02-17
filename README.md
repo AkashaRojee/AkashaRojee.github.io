@@ -23,7 +23,7 @@ To get a local copy up and running, please follow these steps.
 
 ### Prerequisites
 
-Jekyll - _<a href="https://jekyllrb.com/docs/installation" target="_blank">view the Jekyll docs for the installation guide_
+Jekyll - _<a href="https://jekyllrb.com/docs/installation" target="_blank">view the Jekyll docs for the installation guide_</a>
 
 ### Usage
 

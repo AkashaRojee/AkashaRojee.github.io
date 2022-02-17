@@ -55,6 +55,8 @@ Alternatively, to view the website automatically after building, run the the fol
 bundle exec jekyll serve --open-url
 ```
 
+## Author
+
 👤 **Akasha Rojee**
 
 - GitHub: [@AkashaRojee](https://github.com/AkashaRojee)

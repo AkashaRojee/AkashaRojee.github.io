@@ -132,7 +132,7 @@ Additional benefits to this type of mocking are that it can also be used in othe
 
 ### MSW How-To
 
-1. Installation
+Step 1: Installation
 
 Install MSW:
 
@@ -154,7 +154,7 @@ If you use CRA, Jest DOM should already be present. Otherwise, install it:
 npm install @testing-library/jest-dom
 ```
 
-2. Configure MSW
+Step 2: Configure MSW
 
 You need to define which requests should be mocked, and what mock reponses they should return. To do this, you'll use **request handlers**.
 
@@ -250,7 +250,7 @@ export const server = setupServer(...handlers);
 
 **Note:** the server is not an actual server but a mock server. The mock server will intercept requests specified in the handlers, and will handle the requests as if it were a real server.
 
-3. Configure API mocking
+Step 3: Configure API mocking
 
 Now that MSW is configured, you have to configure API mocking for your tests.
 

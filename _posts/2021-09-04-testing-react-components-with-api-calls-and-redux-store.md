@@ -227,7 +227,7 @@ export const handlers = [
   // etc
 ];
 ```
-*For a full example of response resolvers, see https://mswjs.io/docs/getting-started/mocks/rest-api#response-resolver.*
+*For a full example of response resolvers, see <a href="https://mswjs.io/docs/getting-started/mocks/rest-api#response-resolver" target="_blank">this guide</a>.*
 
 Now that the request handlers are configured, you need to integrate the mocking by configuring a server.
 

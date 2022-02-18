@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Testing React Components with API Calls and Redux Store"
+date: 2021-09-04
+---
+
 This guide shows how to mock API calls and use the Redux store when testing React components.
 
 For tests to be effective, they have to be accurate: "the more your tests resembles the way your software is used, the more confidence they can give you" (Kent C. Dodds).
@@ -94,7 +100,7 @@ However, if the API's implementation changes (e.g properties and headers of the 
 
 The better solution is therefore to test API calls with implementation details out of the picture.
 
-...That way, you can still refactor your API calls, and your tests would...
+<!-- ...That way, you can still refactor your API calls, and your tests would... -->
 
 ## API mocking libraries
 
@@ -104,7 +110,15 @@ This way, your test will make a real API request, and the mocking library will i
 
 Some of the tools that Redux recommends are Mock Service Worker, MirageJS, Jest Fetch Mock, and Fetch Mock. The one I use is Mock Service Worker (MSW).
 
-MSW is an API mocking library that uses the Service Worker API to intercept actual requests. Here, the service worker acts like an intermediary server between your app and the network, and intercepts network requests from your app.
+MSW is an API mocking library that uses the Service Worker API (standard available on all modern browsers) to intercept actual requests. Here, the service worker acts like an intermediary server between your app and the network, and intercepts network requests from your app.
+
+Thanks to service workers, MSW allows you to mock at the highest level of the network communication chain, and is the closest thing to mocking a server without creating one. Your app will behave the same as in production, and its code doesn't need to change to accomodate mocking. Moreover, the requests can still be observed in your browser's developer tools.
+
+Additional benefits to this type of mocking are that it can also be used in other scenarios:
+
+- Development - if the actual API is not ready yet, you could mock the API server for your app to use meanwhile
+- Debugging - if a specific API scenario is causing an issue in your app, you could mock it to debug it
+- Experimentation - you could try different API architectures in your app without having to rewrite the API
 
 ## How MSW works
 
@@ -262,7 +276,7 @@ afterAll(() => server.close());
 
 ## References
 
-https://kentcdodds.com/blog/testing-implementation-details
-https://kentcdodds.com/blog/stop-mocking-fetch
-https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
-https://mswjs.io/docs/api
+* <a href="https://kentcdodds.com/blog/testing-implementation-details" target="_blank">Kent C. Dodds - Testing Implementation Details</a>
+* <a href="https://kentcdodds.com/blog/stop-mocking-fetch" target="_blank">Kent C. Dodds - Stop Mocking Fetch</a>
+* <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" target="_blank">MDN Docs - Service Worker API</a>
+* <a href="https://mswjs.io/docs/api" target="_blank">Mock Service Worker</a>

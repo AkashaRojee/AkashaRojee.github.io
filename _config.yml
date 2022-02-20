@@ -38,6 +38,7 @@ minima:
 theme: minima
 plugins:
   - jekyll-feed
+  - jemoji
 kramdown:
   toc_levels: 1..3
   

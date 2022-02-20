@@ -83,7 +83,7 @@ I hope this inspires and encourages you to contribute to your favourite open-sou
 
 What are some of your favourite open-source tools?
 
-Any open-source projects that you are working on?
+Any open-source projects that you have worked or are working on?
 
 Share your experience!
 

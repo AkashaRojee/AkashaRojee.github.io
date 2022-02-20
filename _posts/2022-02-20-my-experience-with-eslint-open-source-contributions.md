@@ -2,6 +2,8 @@
 layout: post
 title: "My Experience with ESLint Open-Source Contributions"
 date: 2022-02-20
+featured-image: /assets/images/my-experience-with-eslint-open-source-contributions.png
+featured-image-alt: My Experience with ESLint Open-Source Contributions
 ---
 
 This post shares one of my open-source contribution experiences, with <a href="https://eslint.org" target="_blank">ESLint</a>.
